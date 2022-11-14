@@ -16,7 +16,6 @@ multitasking
 numpy
 packaging
 pandas
-Pillow
 pycparser
 pyparsing
 PySocks
