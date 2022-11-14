@@ -31,7 +31,7 @@ soupsieve
 SQLAlchemy
 sqlparse
 termcolor
-trio==0.22.0
+trio
 trio-websocket
 urllib3
 webdriver-manager
