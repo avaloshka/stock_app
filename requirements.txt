@@ -9,7 +9,7 @@ cffi==1.15.1
 charset-normalizer==2.1.1
 colorama==0.4.5
 cycler==0.11.0
-django==4.1.2
+django
 exceptiongroup==1.0.0rc9
 fonttools==4.38.0
 greenlet==2.0.0
