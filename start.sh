@@ -1,5 +1,5 @@
-<strong>#!/bin/bash</strong>
-source /venv/bin/activate
+#!/bin/sh
+
 cd /app
 
 echo "----- Collect static files ------ " 
