@@ -1,12 +1,12 @@
 #!/bin/sh
-
+source /venv/bin/activate
 cd /app
 
 echo "----- Collect static files ------ " 
-python3 manage.py collectstatic --noinput
+python manage.py collectstatic --noinput
 
 echo "-----------Apply migration--------- "
-python3 manage.py makemigrations 
+python manage.py makemigrations 
 python manage.py migrate
 
 echo "-----------Run gunicorn--------- "
