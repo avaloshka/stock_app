@@ -1,6 +1,6 @@
-#!/bin/sh
+<strong>#!/bin/bash</strong>
 source /venv/bin/activate
-cd stocks
+cd /app
 
 echo "----- Collect static files ------ " 
 python manage.py collectstatic --noinput
@@ -10,4 +10,4 @@ python manage.py makemigrations
 python manage.py migrate
 
 echo "-----------Run gunicorn--------- "
-gunicorn -b :5000 myapp.wsgi:application
+gunicorn -b :5000 --workers 8 myapp.wsgi:application
