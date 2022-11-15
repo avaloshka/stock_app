@@ -6,6 +6,7 @@ class WebsiteConfig(AppConfig):
     name = 'website'
 
     def ready(self):
-        from jobs.jobs import Millioner
-        millioner = Millioner()
-        millioner.run_in_order()
+        # from jobs.jobs import Millioner
+        # millioner = Millioner()
+        # millioner.run_in_order()
+        pass
