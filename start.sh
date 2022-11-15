@@ -10,4 +10,4 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 
 echo "-----------Run gunicorn--------- "
-gunicorn -b :5000 myapp.wsgi:application
+gunicorn -b :5000 stocks.wsgi:application
