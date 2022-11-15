@@ -22,3 +22,4 @@ webdriver-manager
 yfinance
 mysqlclient
 gunicorn
+setuptools
