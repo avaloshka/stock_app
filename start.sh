@@ -1,6 +1,6 @@
 #!/bin/sh
 source /venv/bin/activate
-cd /app
+cd stocks
 
 echo "----- Collect static files ------ " 
 python manage.py collectstatic --noinput
