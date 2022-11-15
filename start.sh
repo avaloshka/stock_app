@@ -1,4 +1,4 @@
-<strong>#!/bin/bash</strong>
+<strong>#!/bin/sh</strong>
 source /venv/bin/activate
 cd /app
 
