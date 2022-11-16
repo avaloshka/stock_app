@@ -16,7 +16,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.doprax.com', 'stockfortune.co.uk', 'localhost', 'stocks-appnvno.eu-ccofhtfzmvsd.dopraxapp.com']
+ALLOWED_HOSTS = ['.doprax.com', 'stockfortune.co.uk', 'localhost', 'stocks-appnvno.eu-ccofhtfzmvsd.dopraxapp.com', 'https://stocks-appnvno.eu-ccofhtfzmvsd.dopraxapp.com']
 
 
 # Application definition
