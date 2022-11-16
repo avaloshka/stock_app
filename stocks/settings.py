@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.doprax.com', 'stockfortune.co.uk', 'localhost', 'stocks-appnvno.eu-ccofhtfzmvsd.dopraxapp.com', 'https://stocks-appnvno.eu-ccofhtfzmvsd.dopraxapp.com']
 
