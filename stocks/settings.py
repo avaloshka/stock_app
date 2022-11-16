@@ -1,7 +1,7 @@
 
 from pathlib import Path
 import os
-from decouple import config
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -11,12 +11,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.doprax.com', 'stockfortune.co.uk', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.doprax.com', 'stockfortune.co.uk', 'localhost']
 
 
 # Application definition
@@ -88,10 +88,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mydb',
         'USER': 'root',
-        # 'PASSWORD': os.environ['DB_PASS'],
-        'PASSWORD': os.environ.get("DB_PASS"),
-        # 'HOST': os.environ['DB_HOST'],
-        'HOST': os.environ.get("DB_HOST"),
+        'PASSWORD': os.environ["DB_PASS"],
+        'HOST': os.environ["DB_HOST"],
         'PORT': '3306',
     }
 }

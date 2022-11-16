@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 # from jobs pull variable PRICES (it has name and df for a filtered stock). This will be displayed at Strategy
 
 
-# from jobs.jobs import PRICES
+from jobs.jobs import PRICES
 from django.contrib import messages
 
 def home(request):
