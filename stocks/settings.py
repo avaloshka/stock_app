@@ -1,7 +1,7 @@
 
 from pathlib import Path
 import os
-
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -11,12 +11,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['.doprax.com', 'stockfortune.co.uk', 'localhost', 'stocks-appnvno.eu-ccofhtfzmvsd.dopraxapp.com', 'https://stocks-appnvno.eu-ccofhtfzmvsd.dopraxapp.com']
+ALLOWED_HOSTS = ['stockfortune.co.uk', 'localhost', 'localhost:8000' , '90.248.145.65', '90.248.145.65:80']
 
 
 # Application definition
@@ -76,23 +76,24 @@ WSGI_APPLICATION = 'stocks.wsgi.application'
 # }
 
 # this is 2nd version that also worked in development
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydb',
-        'USER': 'root',
-        'PASSWORD': os.environ["DB_PASS"],
-        'HOST': os.environ["DB_HOST"],
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'mydb',
+#         'USER': 'root',
+#         'PASSWORD': os.environ["DB_PASS"],
+#         'HOST': os.environ["DB_HOST"],
+#         'PORT': '3306',
+#     }
+# }
 
 
 
@@ -134,7 +135,7 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = '/website/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "/website/static"),
+    os.path.join(BASE_DIR, "website/static"),
 ]
 
 
