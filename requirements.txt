@@ -53,3 +53,4 @@ webdriver-manager==3.8.4
 wsproto==1.2.0
 yfinance==0.1.84
 gunicorn
+psycopg2
